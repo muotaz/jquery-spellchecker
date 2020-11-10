@@ -13,7 +13,8 @@
     lang: 'en',
     webservice: {
       path: 'spellchecker.php',
-      driver: 'PSpell'
+      driver: 'PSpell',
+      headers: {}
     },
     local: {
       requestError: 'There was an error processing the request.',
@@ -403,7 +404,8 @@
       cache: false,
       data: {
         lang: config.lang,
-        driver: config.webservice.driver
+        driver: config.webservice.driver,
+        headers: config.webservice.headers
       },
       error: function() {
         alert(config.local.requestError);
